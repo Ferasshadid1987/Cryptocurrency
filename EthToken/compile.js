@@ -14,6 +14,7 @@ const contracts = {
     'Interface.sol': source2
   }
 };
+console.log('VERSION:', solc.semver())
 let compiled = solc.compile(contracts, 1);
-console.log(compiled); //comment if you want
+console.log('COMPILED:', compiled); //comment if you want
 module.exports  = compiled.contracts[ 'BCCoin.sol:BCCoin'];
